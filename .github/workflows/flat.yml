@@ -20,7 +20,5 @@ jobs:
         uses: githubocto/flat@v3
         with:
           http_url: https://www.bungie.net/Platform/Destiny2/Manifest/
-          authorize:
-            headers:
-              X-API-KEY: 7ced29b9f06844efb9102fbf73218362
+          authorization: "X-API-KEY ${{secrets.X_API_KEY}}"
           downloaded_filename: manifest.json
