@@ -27,7 +27,6 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: ./manifest.json
-      - name: Set Version Variable
         env:
           version: ${{ manifest.Response.version }}
       - name: Echo new version to console
