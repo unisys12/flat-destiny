@@ -7,7 +7,7 @@ on:
     paths:
       - .github/workflows/flat.yml
 env:
-  base_url: https://www.bungie.net/Platform
+  base_url: https://www.bungie.net
 jobs:
   scheduled:
     runs-on: ubuntu-latest
