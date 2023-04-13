@@ -28,6 +28,6 @@ jobs:
         with:
           path: ./manifest.json
         env:
-          VERSION: fromJson(steps.manifest.outputs.content).Response.version
+          VERSION: ${{ fromJson(steps.manifest.outputs.content).Response.version }}
       - name: Read Manifest Properties
         run: echo $VERSION
