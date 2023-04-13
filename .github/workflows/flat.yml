@@ -30,4 +30,4 @@ jobs:
         env:
           version: ${{ steps.manifest.Response.version }}
       - name: Echo new version to console
-        run: echo "Current version of manifest is $version"
+        run: echo "$steps.manifest"
