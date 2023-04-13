@@ -6,6 +6,8 @@ on:
   push:
     paths:
       - .github/workflows/flat.yml
+env:
+  base_url: https://www.bungie.net/Platform
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -28,4 +30,4 @@ jobs:
         with:
           path: ./manifest.json
       - name: Read Manifest Properties
-        run: echo ${{ fromJson(steps.manifest.outputs.content).Response.version }}
+        run: echo ${{ env.base_url }} ${{ fromJson(steps.manifest.outputs.content).Response.version }}
