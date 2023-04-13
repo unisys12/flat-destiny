@@ -30,4 +30,4 @@ jobs:
         with:
           path: ./manifest.json
       - name: Read Manifest Properties
-        run: echo ${{ env.base_url }} ${{ fromJson(steps.manifest.outputs.content).Response.version }}
+        run: echo ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyNodeStepSummaryDefinition }}
