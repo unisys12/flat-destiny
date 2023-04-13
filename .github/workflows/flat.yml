@@ -30,4 +30,4 @@ jobs:
         env:
           version: ${{ steps.manifest.Response.version }}
       - name: Echo new version to console
-        run: echo "$steps.manifest"
+        run: echo "{{ $steps.manifest }}"
