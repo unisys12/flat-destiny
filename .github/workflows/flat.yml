@@ -27,7 +27,5 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: ./manifest.json
-        env:
-          VERSION: ${{ fromJson(steps.manifest.outputs.content).Response.version }}
       - name: Read Manifest Properties
-        run: echo $VERSION
+        run: echo ${{ fromJson(steps.manifest.outputs.content).Response.version }}
