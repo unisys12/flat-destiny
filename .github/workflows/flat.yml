@@ -29,6 +29,6 @@ jobs:
           path: ./manifest.json
       - name: Set Manifest var
         env:
-          VERSION: "${{ fromJson(steps.manifest.outputs.content).Response.version }}
+          VERSION: "${{ fromJson(steps.manifest.outputs.content).Response.version }}"
       - name: Read Manifest Properties
         run: echo $VERSION
