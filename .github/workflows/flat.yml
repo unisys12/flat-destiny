@@ -27,7 +27,6 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: ./manifest.json
-      - name: Set Manifest var
         env:
           VERSION: fromJson(steps.manifest.outputs.content).Response.version
       - name: Read Manifest Properties
