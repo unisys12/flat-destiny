@@ -27,7 +27,7 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: ./manifest.json
-        env:
-          version: ${{ steps.manifest.Response.version }}
+      - name: Set Version var
+          run: echo "VERSION=${{steps.manifest.Response.version}}" >> $GITHUB_ENV
       - name: Echo new version to console
-        run: echo "${{ steps.manifest }}"
+        run: echo $VERSION
