@@ -24,7 +24,7 @@ jobs:
           downloaded_filename: manifest.json
       - name: Read Manifest Version
         id: manifest
-        uses: unisys12/read-file-action@v1
+        uses: unisys12/read-file-action@master
         with:
           path: ./manifest.json
       - name: Set Manifest var
