@@ -15,7 +15,7 @@ jobs:
         with:
           deno-version: v1.10.x
       - name: Check out repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
@@ -30,4 +30,4 @@ jobs:
         env:
           version: ${{ steps.manifest.Response.version }}
       - name: Echo new version to console
-        run: echo `Current version of manifest is $version`
+        run: echo "Current version of manifest is $version"
