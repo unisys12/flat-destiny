@@ -35,3 +35,81 @@ jobs:
           http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyNodeStepSummaryDefinition }}
           authorization: X-API-KEY ${{secrets.X_API_KEY}}
           downloaded_filename: DestinyNodeStepSummaryDefinition.json
+      - name: Fetch DestinyPlaceDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyPlaceDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyPlaceDefinition.json
+      - name: Fetch DestinyActivityDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyActivityDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyActivityDefinition.json
+      - name: Fetch DestinyActivityTypeDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyActivityTypeDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyActivityTypeDefinition.json
+      - name: Fetch DestinyClassDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyClassDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyClassDefinition.json
+      - name: Fetch DestinyGenderDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyGenderDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyGenderDefinition.json
+      - name: Fetch DestinyInventoryBucketDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyInventoryBucketDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyInventoryBucketDefinition.json
+      - name: Fetch DestinyRaceDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyRaceDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyRaceDefinition.json
+      - name: Fetch DestinyTalentGridDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyTalentGridDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyTalentGridDefinition.json
+      - name: Fetch DestinyUnlockDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyUnlockDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyUnlockDefinition.json
+      - name: Fetch DestinySandboxPerkDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinySandboxPerkDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinySandboxPerkDefinition.json
+      - name: Fetch DestinyStatGroupDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyStatGroupDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyStatGroupDefinition.json
+      - name: Fetch DestinyStatGroupDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyStatGroupDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyStatGroupDefinition.json
+      - name: Fetch DestinyProgressionMappingDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyProgressionMappingDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyProgressionMappingDefinition.json
