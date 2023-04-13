@@ -28,4 +28,4 @@ jobs:
         with:
           path: ./manifest.json
       - name: Set Version var
-        run: echo ${{ steps.manifest.outputs.content }}
+        run: echo ${{ steps.manifest.outputs.content.Response.version }}
