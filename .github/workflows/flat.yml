@@ -24,11 +24,11 @@ jobs:
           downloaded_filename: manifest.json
       - name: Read Manifest Version
         id: manifest
-        uses: unisys12/read-file-action@master
+        uses: juliangruber/read-file-action@v1
         with:
           path: ./manifest.json
       - name: Set Manifest var
         env:
-          MANIFEST: ${{ steps.manifest.outputs.content }}
+          VERSION: "${{ fromJson(steps.manifest.outputs.content).Response.version }}
       - name: Read Manifest Properties
-        run: echo $manifest.Response.version
+        run: echo $VERSION
