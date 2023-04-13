@@ -20,5 +20,15 @@ jobs:
         uses: githubocto/flat@v3
         with:
           http_url: https://www.bungie.net/Platform/Destiny2/Manifest/
-          authorization: "X-API-KEY ${{secrets.X_API_KEY}}"
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
           downloaded_filename: manifest.json
+      - name: Read Manifest Version
+        id: manifest
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./manifest.json
+      - name: Set Version Variable
+        env:
+          version: ${{ manifest.Response.version }}
+      - name: Echo new version to console
+        run: echo `Current version of manifest is $version`
