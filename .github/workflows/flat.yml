@@ -28,8 +28,8 @@ jobs:
         with:
           path: ./manifest.json
       - name: Set Version var
-          env:
-            VERSION: ${{steps.manifest.Response.version}}
-          run: echo $VERSION
+        env:
+          VERSION: ${{steps.manifest.Response.version}}
+        run: echo $VERSION
       - name: Echo new version to console
         run: echo $VERSION
