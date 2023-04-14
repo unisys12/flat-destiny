@@ -1,7 +1,7 @@
 name: data
 on:
   schedule:
-    - cron: 5 4 * * 2
+    - cron: 05 16 * * 2
   workflow_dispatch: {}
   push:
     paths:
