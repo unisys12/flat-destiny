@@ -119,3 +119,9 @@ jobs:
           http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyInventoryItemDefinition }}
           authorization: X-API-KEY ${{secrets.X_API_KEY}}
           downloaded_filename: DestinyInventoryItemDefinition.json
+      - name: Fetch DestinyStatDefinition data
+        uses: githubocto/flat@v3
+        with:
+          http_url: ${{ env.base_url }}${{ fromJson(steps.manifest.outputs.content).Response.jsonWorldComponentContentPaths.en.DestinyStatDefinition }}
+          authorization: X-API-KEY ${{secrets.X_API_KEY}}
+          downloaded_filename: DestinyStatDefinition.json
